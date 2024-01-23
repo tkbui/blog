@@ -1,0 +1,7 @@
+# from group project! thanks ai :)
+# https://prettier.io/docs/en/configuration.html
+printWidth: 120
+singleQuote: true
+semi: true
+tabWidth: 2
+trailingComma: 'all'
