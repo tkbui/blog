@@ -8,8 +8,72 @@ $secondary: #58423b;
 // $light:
 // $dark:
 
+// other variables
+$light-green: #c5e2aa;
+
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
+//----- individual page and component styling -----
+// general
 body {
   color: $primary;
+}
+
+::selection {
+  color: $primary;
+  background-color: $light-green;
+}
+
+// * {
+//   border: red 1px solid;
+// }
+
+// home page
+.description {
+  width: 50%;
+}
+
+// navbar
+.navbar {
+  background-color: $light-green;
+}
+
+.active {
+  font-weight: 600;
+}
+
+a:not(.active) {
+  color: $secondary;
+}
+
+a:not(.active):hover {
+  text-decoration: wavy underline;
+  color: $primary;
+}
+
+// footer
+.footer {
+  background-color: $light-green;
+}
+
+// media queries
+@media only screen and (max-width: 1366px) {
+  .description {
+    width: 75%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .description {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .image-header-section {
+    padding: 0 50px 0 50px;
+    font-size: 3vw;
+  }
 }
