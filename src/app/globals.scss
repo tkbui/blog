@@ -24,7 +24,14 @@ body {
   background-color: $light-green;
 }
 
+// * {
+//   border: red 1px solid;
+// }
+
 // home page
+.description {
+  width: 50%;
+}
 
 // navbar
 .navbar {
@@ -47,4 +54,26 @@ a:not(.active):hover {
 // footer
 .footer {
   background-color: $light-green;
+}
+
+// media queries
+@media only screen and (max-width: 1366px) {
+  .description {
+    width: 75%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .description {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .image-header-section {
+    padding: 0 50px 0 50px;
+    font-size: 3vw;
+  }
 }
