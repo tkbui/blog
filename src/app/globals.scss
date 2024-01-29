@@ -10,6 +10,7 @@ $secondary: #58423b;
 
 // other variables
 $light-green: #c5e2aa;
+$darker-brown: #291913;
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
@@ -17,6 +18,19 @@ $light-green: #c5e2aa;
 // general
 body {
   color: $primary;
+  background: white;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $secondary;
+}
+
+img {
+  border: 2px solid $primary;
 }
 
 ::selection {
@@ -36,24 +50,100 @@ body {
 // navbar
 .navbar {
   background-color: $light-green;
+  border-bottom: 2px solid $primary;
 }
 
-.active {
-  font-weight: 600;
+a {
+  &.active {
+    font-weight: 600;
+  }
+
+  &:not(.active) {
+    color: $secondary;
+
+    &:hover {
+      text-decoration: wavy underline;
+      color: $primary;
+    }
+  }
 }
 
-a:not(.active) {
-  color: $secondary;
-}
+.theme-toggle {
+  transition: 0.25s;
+  position: absolute;
+  right: 20px;
 
-a:not(.active):hover {
-  text-decoration: wavy underline;
-  color: $primary;
+  &.bi-sun {
+    color: $secondary;
+    border: 2px solid $secondary;
+    background-color: $darker-brown;
+
+    &:hover {
+      color: $primary;
+      border: 2px solid $light-green;
+      background-color: $light-green;
+    }
+  }
+
+  &.bi-moon {
+    color: $secondary;
+    border: 2px solid $secondary;
+    background-color: $light-green;
+
+    &:hover {
+      color: $light-green;
+      border: 2px solid $primary;
+      background-color: $primary;
+    }
+  }
 }
 
 // footer
 .footer {
   background-color: $light-green;
+  border-top: 2px solid $primary;
+}
+
+// dark mode -- still learning the cleanest and most efficient way to implement this
+body.dark {
+  background-color: $darker-brown;
+  color: $light;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $light-green;
+  }
+
+  img {
+    border: 2px solid $secondary;
+  }
+
+  ::selection {
+    color: $light;
+    background-color: $secondary;
+  }
+
+  .navbar {
+    background-color: $darker-brown;
+    border-bottom: 2px solid $secondary;
+  }
+
+  a:not(.active) {
+    color: $secondary;
+
+    &:hover {
+      text-decoration: wavy underline;
+      color: $light-green;
+    }
+  }
+
+  .footer {
+    background-color: $darker-brown;
+    border-top: 2px solid $secondary;
+  }
 }
 
 // media queries
