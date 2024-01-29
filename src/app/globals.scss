@@ -118,7 +118,7 @@ body.dark {
   }
 
   img {
-    border: 2px solid $secondary;
+    border-color: $secondary;
   }
 
   ::selection {
@@ -128,21 +128,20 @@ body.dark {
 
   .navbar {
     background-color: $darker-brown;
-    border-bottom: 2px solid $secondary;
+    border-color: $secondary;
   }
 
   a:not(.active) {
     color: $secondary;
 
     &:hover {
-      text-decoration: wavy underline;
       color: $light-green;
     }
   }
 
   .footer {
     background-color: $darker-brown;
-    border-top: 2px solid $secondary;
+    border-color: $secondary;
   }
 }
 
