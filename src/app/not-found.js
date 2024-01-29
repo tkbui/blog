@@ -11,8 +11,8 @@ function Custom404() {
 
   return (
     <div className="position-absolute top-50 start-50 translate-middle text-center">
-      <h4>{"Sorry, that page doesn't exist!"}</h4>
-      <h6 className="text-secondary">Redirecting to home...</h6>
+      <h3>{"Sorry, that page doesn't exist!"}</h3>
+      <h6>Redirecting to home...</h6>
     </div>
   );
 }

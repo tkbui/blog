@@ -3,7 +3,7 @@ import './globals.scss';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
-import { ThemeProvider } from '@/context/ThemeContext';
+import ThemeProvider from '@/redux/ThemeProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
