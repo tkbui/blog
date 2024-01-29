@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { useTheme } from '@/context/ThemeContext';
 
 function ThemeToggleButton() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
-  useEffect(() => {
-    isDarkMode ? document.body.classList.add('dark') : document.body.classList.remove('dark');
-  });
+  const { isDarkMode, toggleTheme } = useTheme();
 
   return (
     <button
