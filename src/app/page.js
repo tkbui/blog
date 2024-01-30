@@ -19,14 +19,14 @@ export default function Home() {
               src="/images/tatami cover square.png"
               width={250}
               height={250}
-              className="img-fluid rounded-circle border border-primary border-2"
+              className="img-fluid rounded-circle"
               alt="A picture from Tatami Galaxy."
             />
           </Link>
         </div>
         <div className="d-flex flex-column justify-content-center">
           <h1>{"hiya! i'm tk :3c"}</h1>
-          <h4 className="text-secondary">and welcome, welcome!!!</h4>
+          <h4>and welcome, welcome!!!</h4>
         </div>
       </div>
       <div className="description p-5 pt-3 text-center mx-auto">
