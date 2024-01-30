@@ -69,27 +69,29 @@ a {
   transition: 0.25s;
   position: absolute;
   right: 20px;
+  -webkit-text-stroke: 0.5px;
+  border: 2px solid;
 
   &.bi-sun {
     color: $secondary;
-    border: 2px solid $secondary;
+    border-color: $secondary;
     background-color: $dark;
 
     &:hover {
       color: $primary;
-      border: 2px solid $light-green;
+      border-color: $light-green;
       background-color: $light-green;
     }
   }
 
   &.bi-moon {
     color: $secondary;
-    border: 2px solid $secondary;
+    border-color: $secondary;
     background-color: $light-green;
 
     &:hover {
       color: $light-green;
-      border: 2px solid $primary;
+      border-color: $primary;
       background-color: $primary;
     }
   }
