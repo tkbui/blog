@@ -1,22 +1,34 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Game from './Game';
 import { fetchGames } from '../api/fetchData';
 
-function Games() {
-  const [games, setGames] = useState({});
+function DisplayGames() {
+  const [games, setGames] = useState([]);
 
-  const getGames = async () => {
-    const data = await fetchGames();
-    console.log('data: ' + data);
-    console.log('games: ' + data.games);
-  };
+  useEffect(() => {
+    const promise = fetchGames();
+    promise.then((response) => {
+      setGames(response.games);
+      console.log('games: ' + games);
+    });
+  }, []);
 
   return (
-    <button className="position-absolute start-50 top-50 translate-middle" onClick={getGames}>
-      Click!
-    </button>
+    <div>
+      {games.map((game, index) => {
+        <Game
+          key={index}
+          title={game.title}
+          genre={game.genre}
+          link={game.link}
+          imageLink={game.imageLink}
+          comments={game.comments}
+        />;
+      })}
+    </div>
   );
 }
 
-export default Games;
+export default DisplayGames;

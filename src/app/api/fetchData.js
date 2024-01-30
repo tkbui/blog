@@ -1,8 +1,7 @@
 import { BASE_URL } from './utils';
 
 export const fetchGames = async () => {
-  console.log('base: ' + process.env.API_URL);
-  return fetch(process.env.API_URL + '/games')
+  return fetch(BASE_URL + '/games')
     .then((response) => response.json())
     .then((data) => {
       return data;
@@ -18,7 +17,7 @@ export const fetchSongs = async () => {
 };
 
 export const fetchTest = async () => {
-  return fetch(process.env.API_URL + '/home')
+  return fetch(BASE_URL + '/home')
     .then((response) => response.json())
     .then((data) => {
       return data;
