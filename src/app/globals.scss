@@ -6,11 +6,10 @@ $secondary: #58423b;
 // $warning:
 // $danger:
 // $light:
-// $dark:
+$dark: #291913;
 
 // other variables
 $light-green: #c5e2aa;
-$darker-brown: #291913;
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
@@ -18,7 +17,7 @@ $darker-brown: #291913;
 // general
 body {
   color: $primary;
-  background: white;
+  background-color: white;
 }
 
 h4,
@@ -74,7 +73,7 @@ a {
   &.bi-sun {
     color: $secondary;
     border: 2px solid $secondary;
-    background-color: $darker-brown;
+    background-color: $dark;
 
     &:hover {
       color: $primary;
@@ -104,7 +103,7 @@ a {
 
 // dark mode -- still learning the cleanest and most efficient way to implement this
 body.dark {
-  background-color: $darker-brown;
+  background-color: $dark;
   color: $light;
 
   h4,
@@ -123,7 +122,7 @@ body.dark {
   }
 
   .navbar {
-    background-color: $darker-brown;
+    background-color: $dark;
     border-color: $secondary;
   }
 
@@ -136,7 +135,7 @@ body.dark {
   }
 
   .footer {
-    background-color: $darker-brown;
+    background-color: $dark;
     border-color: $secondary;
   }
 }

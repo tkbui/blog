@@ -15,6 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="/icons/cup-hot-fill.svg" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider>
           <Header />
